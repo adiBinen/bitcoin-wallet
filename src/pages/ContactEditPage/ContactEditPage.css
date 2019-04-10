@@ -1,0 +1,16 @@
+.contact-edit-header {
+    display: flex;
+    justify-content: space-between;
+    height: 40px; 
+  }
+  .contact-edit-header a:not(:last-child) {
+    margin: 0 10px 0 0; 
+  }
+  
+  .contact-edit .contact-edit-row {
+    margin: 10px 0 0 0; 
+  }
+  
+  .moves-list-container, .transter-coins-container {
+    margin: 20px 0;
+  }
