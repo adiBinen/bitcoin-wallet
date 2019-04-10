@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/bitcoin-wallet/static/js/runtime~main.027d9ebc.js"
   },
   {
-    "revision": "3ae36392605ab85397c1",
-    "url": "/bitcoin-wallet/static/js/main.3ae36392.chunk.js"
+    "revision": "ef7a78522f1b73e2b895",
+    "url": "/bitcoin-wallet/static/js/main.ef7a7852.chunk.js"
   },
   {
     "revision": "3f42d2914aa3df616232",
     "url": "/bitcoin-wallet/static/js/1.3f42d291.chunk.js"
   },
   {
-    "revision": "3ae36392605ab85397c1",
+    "revision": "ef7a78522f1b73e2b895",
     "url": "/bitcoin-wallet/static/css/main.251da3af.chunk.css"
   },
   {
-    "revision": "08ed7a59ff64282e03467657fc51b6f8",
+    "revision": "3af236337a78c80e818acd634c032b1e",
     "url": "/bitcoin-wallet/index.html"
   }
 ];
