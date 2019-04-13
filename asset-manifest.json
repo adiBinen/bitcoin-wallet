@@ -1,13 +1,13 @@
 {
-  "main.css": "/bitcoin-wallet/static/css/main.251da3af.chunk.css",
-  "main.js": "/bitcoin-wallet/static/js/main.ef7a7852.chunk.js",
-  "main.js.map": "/bitcoin-wallet/static/js/main.ef7a7852.chunk.js.map",
-  "static/js/1.3f42d291.chunk.js": "/bitcoin-wallet/static/js/1.3f42d291.chunk.js",
-  "static/js/1.3f42d291.chunk.js.map": "/bitcoin-wallet/static/js/1.3f42d291.chunk.js.map",
+  "main.css": "/bitcoin-wallet/static/css/main.19d011c5.chunk.css",
+  "main.js": "/bitcoin-wallet/static/js/main.11cdf34d.chunk.js",
+  "main.js.map": "/bitcoin-wallet/static/js/main.11cdf34d.chunk.js.map",
+  "static/js/1.462128f8.chunk.js": "/bitcoin-wallet/static/js/1.462128f8.chunk.js",
+  "static/js/1.462128f8.chunk.js.map": "/bitcoin-wallet/static/js/1.462128f8.chunk.js.map",
   "runtime~main.js": "/bitcoin-wallet/static/js/runtime~main.027d9ebc.js",
   "runtime~main.js.map": "/bitcoin-wallet/static/js/runtime~main.027d9ebc.js.map",
-  "static/css/main.251da3af.chunk.css.map": "/bitcoin-wallet/static/css/main.251da3af.chunk.css.map",
+  "static/css/main.19d011c5.chunk.css.map": "/bitcoin-wallet/static/css/main.19d011c5.chunk.css.map",
   "index.html": "/bitcoin-wallet/index.html",
-  "precache-manifest.6ae94c42af96f748f5467b67cc6d2637.js": "/bitcoin-wallet/precache-manifest.6ae94c42af96f748f5467b67cc6d2637.js",
+  "precache-manifest.ceed8dfedc0b404a19979005576d7ee4.js": "/bitcoin-wallet/precache-manifest.ceed8dfedc0b404a19979005576d7ee4.js",
   "service-worker.js": "/bitcoin-wallet/service-worker.js"
 }
