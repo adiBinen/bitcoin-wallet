@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 
 import bitcoinService from '../../services/BitcoinService'
 import userService from '../../services/UserService'
+import MovesList from '../../components/MovesList'
 
 import coinsImg from '../../assets/icons/coins.png'
 import bitcoinImg from '../../assets/icons/bitcoin.png'
@@ -15,13 +17,16 @@ class HomePage extends Component {
   }
 
   async componentDidMount() {
-    const bitcoinRate = await bitcoinService.getBitcoinRate(this.state.user.coins)
-    this.setState({bitcoinRate})
+    if (this.state.user) {
+      const bitcoinRate = await bitcoinService.getBitcoinRate(this.state.user.coins)
+      this.setState({bitcoinRate})
+    }
   }
 
   render() {
-    const user = this.state.user
-    
+    const {user} = this.state
+
+    if (!user) return <Redirect to={`/signup`}/>;
     return (
       <div className="home-page">
           <div className="user-details">
@@ -33,6 +38,7 @@ class HomePage extends Component {
             <img src={bitcoinImg} alt="bitcoin" width="24px" height="24px" /> BTC: {this.state.bitcoinRate}
             </div>
           </div>
+          <MovesList moves={userService.getMoves()} title='Your last 3 moves:'/>
       </div>
     );
   }

@@ -1,17 +1,21 @@
 import React, { Component }  from 'react';
 import { Redirect }  from 'react-router-dom';
-import contactService from '../../services/ContactService'
-import imgAvatar from '../../assets/img_avatar.png'
-import './ContactEditPage.css'
+
+import userService from '../../services/UserService';
+import contactService from '../../services/ContactService';
+
+import imgAvatar from '../../assets/img_avatar.png';
+import './ContactEditPage.css';
 
 class ContactEditPage extends Component {
   state =  {
-      contact: {},
-      nameIsValid: true,
-      emailIsValid: true,
-      phoneIsValid: true,
-      redirectOnSave: false,
-      redirectOnDelete: false
+    user: userService.loadUser(),
+    contact: {},
+    nameIsValid: true,
+    emailIsValid: true,
+    phoneIsValid: true,
+    redirectOnSave: false,
+    redirectOnDelete: false
     }
 
   componentDidMount() {
@@ -60,10 +64,11 @@ class ContactEditPage extends Component {
   }
 
   render() {
-    const { contact, redirectOnSave, redirectOnDelete } = this.state
+    const { user, contact, redirectOnSave, redirectOnDelete } = this.state
     const avatar = contact.picture || imgAvatar
 
-    if (redirectOnSave) return <Redirect to={`/contact/${contact._id}`}/>;
+    if (!user) return <Redirect to={`/signup`}/>;
+    else if (redirectOnSave) return <Redirect to={`/contact/${contact._id}`}/>;
     else if (redirectOnDelete) return <Redirect to={`/contact`}/>;
     return (
         <div className="contact-edit">
@@ -73,7 +78,7 @@ class ContactEditPage extends Component {
                 <form onSubmit={this.handleSubmit}>
                     {!this.state.nameIsValid && <div>Name is too short</div>}
                     <label>Name:</label>
-                    <input className="contact-edit-row" name={'name'} value={contact.name || ''} onChange={this.handleChange('name')}/><br/>
+                    <input className="contact-edit-row" value={contact.name || ''} onChange={this.handleChange('name')}/><br/>
                     
                     {!this.state.phoneIsValid && <div>The phone number is not valid</div>}
                     <label>Phone:</label>
