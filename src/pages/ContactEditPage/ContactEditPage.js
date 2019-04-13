@@ -10,7 +10,8 @@ class ContactEditPage extends Component {
       nameIsValid: true,
       emailIsValid: true,
       phoneIsValid: true,
-      redirect: false
+      redirectOnSave: false,
+      redirectOnDelete: false
     }
 
   componentDidMount() {
@@ -39,7 +40,7 @@ class ContactEditPage extends Component {
 
     if (nameIsValid && phoneIsValid && emailIsValid) {
         contactService.saveContact(this.state.contact).then(updatedContact => {
-            this.setState({redirect: true});
+            this.setState({redirectOnSave: true});
         })
     }
   }
@@ -52,16 +53,21 @@ class ContactEditPage extends Component {
     }
   }
 
+  handleRemove = async () => {
+    contactService.deleteContact(this.state.contact._id).then(() => {
+      this.setState({redirectOnDelete: true});
+    })
+  }
+
   render() {
-    const { contact, redirect } = this.state
+    const { contact, redirectOnSave, redirectOnDelete } = this.state
     const avatar = contact.picture || imgAvatar
 
-    if (redirect) {
-      return <Redirect to={`/contact/${contact._id}`}/>;
-    }
+    if (redirectOnSave) return <Redirect to={`/contact/${contact._id}`}/>;
+    else if (redirectOnDelete) return <Redirect to={`/contact`}/>;
     return (
         <div className="contact-edit">
-        
+            {contact._id && <button onClick={this.handleRemove.bind(this)}>Delete</button>}
             <div className="contact-edit-body">
                 <img src={avatar} alt="Person" width="96" height="96" /><br/>
                 <form onSubmit={this.handleSubmit}>
