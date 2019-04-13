@@ -5,6 +5,7 @@ import userService from '../../services/UserService';
 import contactService from '../../services/ContactService';
 import ContactList from '../../components/ContactList';
 
+import addNewImg from '../../assets/icons/plus.png';
 import './ContactPage.css'
 
 class ContactPage extends Component {
@@ -29,7 +30,9 @@ class ContactPage extends Component {
         <div className="contacts-container">
             <ContactList contacts={this.state.contacts} />
         </div>
-        <Link to="/contact/edit">Add New</Link>
+        <Link to="/contact/edit">
+          <img className="add-new-img" src={addNewImg} alt="add new contant" title="add new contant"/>
+        </Link>
       </div>
     );
   }

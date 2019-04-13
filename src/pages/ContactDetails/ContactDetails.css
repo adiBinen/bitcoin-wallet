@@ -1,3 +1,8 @@
+.contact-details {
+  height: 360px;
+  overflow-y: scroll;
+}
+
 .contact-details-header {
   display: flex;
   justify-content: space-between;
@@ -13,4 +18,22 @@
 
 .moves-list-container, .transter-coins-container {
   margin: 20px 0;
+}
+
+.avatat-img {
+  display: block;
+  width: 96px;
+  height: 96px; 
+}
+
+.datails-btn {
+  background: none;
+  border: none;
+  width: 35px;
+  height: 35px;
+  padding: 1px;
+}
+
+.datails-btn:last-of-type {
+  float: right;
 }

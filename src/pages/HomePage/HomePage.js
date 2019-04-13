@@ -24,7 +24,8 @@ class HomePage extends Component {
   }
 
   render() {
-    const {user} = this.state
+    const {user} = this.state;
+    const userMoves = userService.getMoves();
 
     if (!user) return <Redirect to={`/signup`}/>;
     return (
@@ -38,7 +39,7 @@ class HomePage extends Component {
             <img src={bitcoinImg} alt="bitcoin" width="24px" height="24px" /> BTC: {this.state.bitcoinRate}
             </div>
           </div>
-          <MovesList moves={userService.getMoves()} title='Your last 3 moves:'/>
+          {userMoves.length > 0 && <MovesList moves={userMoves} title='Your last 3 moves:'/>}
       </div>
     );
   }

@@ -3,14 +3,47 @@
     justify-content: space-between;
     height: 40px; 
   }
-  .contact-edit-header a:not(:last-child) {
-    margin: 0 10px 0 0; 
-  }
-  
-  .contact-edit .contact-edit-row {
-    margin: 10px 0 0 0; 
-  }
   
   .moves-list-container, .transter-coins-container {
     margin: 20px 0;
+  }
+
+  .edit-form {
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    grid-template-rows: 40px 40px 40px 40px;
+    align-items: center;
+  }
+
+  .edit-form > input {
+    padding: 5px 10px;
+    border: .5px solid gray;
+    border-radius: 3px;
+  }
+
+  .edit-btn {
+    background: none;
+    border: none;
+    width: 35px;
+    height: 35px;
+    padding: 1px;
+  }
+  
+  .edit-btn:last-of-type {
+    float: right;
+  }
+
+  .save-btn {
+    float: right;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 0px #0000007d;
+    padding: 3px 10px;
+    grid-column: 2;
+    width: 50px;
+    justify-self: end;
+    align-self: end;
   }

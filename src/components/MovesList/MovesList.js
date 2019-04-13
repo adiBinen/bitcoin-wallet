@@ -4,7 +4,8 @@ import './MovesList.css'
 
 const MovesList = ({moves, title, isDetailsPage}) => {
     var movesList = moves.map(move => (
-        <li key={move.at}>
+        <li key={move.at} className="move-item">
+            <hr/>
             {!isDetailsPage && <p>To: {move.to}</p>}
             <p>At: {new Date(move.at).toLocaleString()}</p>
             <p>Amount: {move.amount} coins</p>

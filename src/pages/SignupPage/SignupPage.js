@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 
 import userService from '../../services/UserService';
+import bitcoinImg from '../../assets/icons/bitcoin.png';
 import './SignupPage.css';
 
 class SignupPage extends Component {
@@ -33,10 +34,11 @@ class SignupPage extends Component {
         if (redirect) return <Redirect to={'/'} />;
         return (
             <div className="signup-page">
+                <img src={bitcoinImg} alt="bitcoin"/>
                 <form onSubmit={this.handleSubmit}>
-                    <label>Please enter your name:</label><br />
+                    <label>Please enter your name:</label>
                     {!this.state.nameIsValid && <div>Name is too short</div>}
-                    <input type="text" onChange={this.handleChange('name')} /><br />
+                    <input type="text" onChange={this.handleChange('name')} />
                     <input type="submit" value="Signup" />
                 </form>
             </div>

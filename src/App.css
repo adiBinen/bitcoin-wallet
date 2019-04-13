@@ -6,16 +6,30 @@
   margin: 30px auto; 
 }
 
-.app .app-content {
-  padding: 20px 0 0 0;
-  height: 400px;
-  overflow-x: hidden;
-  overflow-y: auto; 
-}
-
 .app [class^="flaticon-"]:before,
 .app [class*=" flaticon-"]:before,
 .app [class^="flaticon-"]:after,
 .app [class*=" flaticon-"]:after {
     margin: 0; 
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 15px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

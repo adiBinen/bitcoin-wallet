@@ -1,0 +1,23 @@
+.transfer-fund {
+    background-color: #afd6fb;
+    padding: 1px 10px 20px 10px;
+    border-radius: 7px;
+    margin: 20px 0;
+}
+
+input[type="number"] {
+    width: 80px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    background: none;
+    border: none;
+    background-color: #ffffffb8;
+    border-radius: 3px;
+    margin-left: 10px;
+    padding: 2px 8px;
+}

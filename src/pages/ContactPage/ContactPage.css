@@ -10,11 +10,18 @@
 
 .contacts-page .contacts-container {
   max-height: 360px;
-  overflow-x: auto; 
+  overflow-x: hidden; 
 }
 
 .contacts-page .action-container {
   position: absolute;
   bottom: -3px;
   right: 10px;
+}
+
+.add-new-img {
+  position: absolute;
+  height: 55px;
+  right: 15px;
+  bottom: -5px;
 }
